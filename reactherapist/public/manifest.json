@@ -1,0 +1,20 @@
+{
+  "short_name": "Lousir Psi",
+  "name": "Lousir Atendimento Psicológico",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "type": "image/svg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.svg",
+      "type": "image/svg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#004AAD",
+  "background_color": "#2c3e50"
+}
