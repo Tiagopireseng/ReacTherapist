@@ -12,7 +12,6 @@ const Header: React.FC = () => {
             <img src="logo.svg" alt="Therapist Logo" />
           </button>
         </Link>
-        {/* <h2>Lousir Psi</h2> */}
       </div>
       <nav className="header-navbar">
         <ul>
