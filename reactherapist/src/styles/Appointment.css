@@ -1,0 +1,109 @@
+/* Appointment.css */
+
+
+
+.appointment {
+    min-width: 25px;
+    padding: 15px;
+    margin: 0;
+    cursor: pointer;
+    background-color: #fff; /* Default background */
+    border: 0,2px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .appointment.scheduled {
+    background-color: #3498db; /* Blue for scheduled */
+    .btn-appointment {
+      color: #fff;
+      background-color: #d81818;
+    }
+  
+}
+  
+  .appointment.confirmed {
+    background-color: purple;
+    .btn-appointment {
+      color: #fff;
+      background-color: #d81818;
+    }
+    }
+
+.btn-appointment {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+    background-color: #3498db;
+    color: #fff;
+}
+.btn-appointment:link,
+.btn-appointment:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn-appointment:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-appointment:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-appointment-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn-appointment::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-appointment-white::after {
+    background-color: #fff;
+}
+
+.btn-appointment:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-appointment-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+  
+ 
+  
