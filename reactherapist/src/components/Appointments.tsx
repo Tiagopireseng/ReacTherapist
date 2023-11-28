@@ -22,9 +22,12 @@ const Appointments: React.FC = observer(() => {
           {appointmentStore.appointments.size > 0 ? (
             <Schedule />
           ) : (
-            <p>Loading...</p>
+            <span className="loader"></span>
           )}
         </section>
+        <section className="sub-section">
+          <p>Selecione um horário vago para solicitar o agendamento da sua consulta</p>
+          </section>
        </section> 
     </div>
   );
