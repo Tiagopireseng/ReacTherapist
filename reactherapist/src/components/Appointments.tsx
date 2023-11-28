@@ -17,16 +17,13 @@ const Appointments: React.FC = observer(() => {
     <div className="appointment-feed">
       
       <section className="section">
-        <h2>Appointments</h2>
+        <h2>Agenda da Semana</h2>
+        <section className="sub-section">
           {appointmentStore.appointments.size > 0 ? (
             <Schedule />
           ) : (
             <p>Loading...</p>
           )}
-        <p>Conhecer a si mesmo é o primeiro passo para a mudança.</p>
-        <section className="sub-section">
-          
-          
         </section>
        </section> 
     </div>

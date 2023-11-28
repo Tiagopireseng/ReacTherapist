@@ -2,21 +2,33 @@ import React, { useMemo } from 'react';
 import { observer } from 'mobx-react-lite';
 import appointmentStore from '../stores/AppointmentStore';
 import Appointment from './Appointment';
-import { AppointmentMap, AppointmentType } from '../types/Appointments';
+import { AppointmentType } from '../types/Appointments';
 
 const Schedule: React.FC = observer(() => {
   // Helper function to format date to YYYY-MM-DD
   const formatDate = (date: Date): string => {
     return date.toISOString().split('T')[0];
   };
+  const formatDateHeader = (date: Date): JSX.Element => {
+    const dayOfWeek = date.toLocaleString('en-US', { weekday: 'short' }); // 'Mon', 'Tue', etc.
+    const dayOfMonth = date.getDate();
+    return (
+      <>
+        {dayOfWeek}<br />{dayOfMonth}
+      </>
+    );
+  };
+  
 
   // Function to get the current week range (Monday to Friday)
   const getCurrentWeekDays = (): Date[] => {
     const now = new Date();
-    const first = now.getDate() - now.getDay() + 1; // First day is Monday
+    const first = now.getDate() - now.getDay() + 1; // Adjust so that week starts on Monday
     const days = [];
     for (let i = 0; i < 5; i++) { // 0 (Monday) to 4 (Friday)
-      days.push(new Date(now.setDate(first + i)));
+      const day = new Date(now);
+      day.setDate(first + i);
+      days.push(day);
     }
     return days;
   };
@@ -34,28 +46,29 @@ const Schedule: React.FC = observer(() => {
         return appointmentStore.appointments.get(appointmentKey) as AppointmentType;
       })
     }));
-  },[appointmentStore.appointments]);
-
+  }, [Array.from(appointmentStore.appointments.values())]); // Dependency on the values of appointments
 
   return (
     <div className="schedule">
       <table>
         <thead>
           <tr>
+            <th>Time</th>
             {scheduleGrid.map(day => (
-              <th key={day.date.toString()}>{day.date.toLocaleDateString()}</th>
+              <th key={day.date.toString()}>{formatDateHeader(day.date)}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {Array.from({ length: 15 }).map((_, hourIndex) => (
             <tr key={hourIndex}>
+              <td>{`${7 + hourIndex}:00`}</td>
               {scheduleGrid.map(day => (
                 <td key={day.date.toString() + hourIndex}>
-                    <Appointment
-                      id={formatDate(day.date) + '_' + (hourIndex + 7)}
-                      appointment={day.appointments[hourIndex]}
-                    />
+                  <Appointment
+                    id={`${formatDate(day.date)}_${7 + hourIndex}`}
+                    appointment={day.appointments[hourIndex]}
+                  />
                 </td>
               ))}
             </tr>
