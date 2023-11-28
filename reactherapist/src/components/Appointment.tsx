@@ -6,7 +6,7 @@ import  '../styles/Appointment.css';
 
 const Appointment: React.FC<{ appointment: AppointmentType; id: string }> = observer(({ appointment, id }) => {
   const [isSelected, setIsSelected] = React.useState(false);
-  const { startTime, endTime, isConfirmed, isScheduled, weekDay } = appointment;
+  const { isConfirmed, isScheduled} = appointment;
   const appointmentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

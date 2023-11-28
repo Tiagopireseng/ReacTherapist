@@ -1,8 +1,6 @@
 // src/components/Home.tsx
 import React from 'react';
-import { useEffect } from 'react';
 import '../styles/Home.css';
-import { observer } from 'mobx-react-lite';
 
 
 
