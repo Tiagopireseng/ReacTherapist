@@ -120,9 +120,12 @@ nav ul {
     justify-content: space-around;
     align-items: center;
     padding-left: 0;
-    margin: 5px;
+    margin: 2px;
 }
 
+nav ul li {
+  margin: 1px
+}
 
 
 nav ul li a {
@@ -153,7 +156,7 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust margin for better spacing */
+        margin: 2px 0; /* Adjust margin for better spacing */
     }
 
     nav ul li a {
