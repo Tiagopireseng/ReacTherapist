@@ -1,11 +1,4 @@
-/* Home.css */
-/* .home-feed {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    
-} */
+
 .section {
     max-width: 1200px; /* Set a maximum width for the content */
     margin: 0 auto; /* Center the content horizontally */
@@ -23,44 +16,16 @@
     margin: 0 0 10px; /* Adjust margin for spacing between elements */
 }
 
-.sub-section {
+.appointment {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     }
 
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
     .section{
-        margin: 10px 20px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .brain-art-image{
-        width: 450px
-    }
-}
-@media screen and (max-width: 750px) {
-    .sub-section {
-        flex-direction: column;
-    }
-    .brain-art-image{
-        width: 375px
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .home-feed {
+        min-width: 350px;
         margin-top: 70px;
     }
-    .sub-section {
-        flex-direction: column;
-    }
-    .brain-art-image{
-        width: 300px;
-        margin: 10px 0px
-    }
-    
 }
