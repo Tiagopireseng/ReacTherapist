@@ -1,6 +1,6 @@
 import { makeAutoObservable,observable,runInAction } from 'mobx';
 import { getDatabase, ref, onValue, update } from 'firebase/database';
-import { AppointmentType, AppointmentMap } from '../types/Appointments';
+import { AppointmentType } from '../types/Appointments';
 import { initializeApp } from "firebase/app";
 
 
