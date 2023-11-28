@@ -32,6 +32,8 @@ const Schedule: React.FC = observer(() => {
     }
     return days;
   };
+  const appointmentsArray = Array.from(appointmentStore.appointments);
+
 
   // Memoize the computation of the schedule grid
   const scheduleGrid = useMemo(() => {
@@ -46,7 +48,7 @@ const Schedule: React.FC = observer(() => {
         return appointmentStore.appointments.get(appointmentKey) as AppointmentType;
       })
     }));
-  }, [Array.from(appointmentStore.appointments.values())]); // Dependency on the values of appointments
+  }, appointmentsArray); // Dependency on the values of appointments
 
   return (
     <div className="schedule">
