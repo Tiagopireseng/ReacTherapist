@@ -45,11 +45,13 @@ class AppointmentStore {
   fetchAppointments() {
     const db = getDatabase();
     const appointmentsRef = ref(db, 'Appointments');
-
+  
     onValue(appointmentsRef, (snapshot) => {
       const data = snapshot.val();
-      Object.entries(data).forEach(([id, appointmentData]) => {
-        this.appointments.set(id, observable(appointmentData as AppointmentType));
+      runInAction(() => {
+        Object.entries(data).forEach(([id, appointmentData]) => {
+          this.appointments.set(id, observable(appointmentData as AppointmentType));
+        });
       });
     });
   }
