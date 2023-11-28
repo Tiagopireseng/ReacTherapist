@@ -1,10 +1,15 @@
 // src/components/Home.tsx
 import React from 'react';
+import { useEffect } from 'react';
 import '../styles/Home.css';
+import { observer } from 'mobx-react-lite';
+
+
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="home-feed">
+      
       <section className="section">
         <h2>Autoconhecimento</h2>
         <p>Conhecer a si mesmo é o primeiro passo para a mudança.</p>
@@ -14,10 +19,10 @@ const Home: React.FC = () => {
             Por um lado somos objetivos e racionais, lutando para sobreviver e prosperar. Fazendo escolhas e tomando decisões,
             pensando no que seria melhor para conseguirmos nossos objetivos.</p>
           </div>
-          <img src="home_brain_640x440.jpg" alt="Brain" className="home-image" />
-          <div className='paragraph'><span style={{color:'green'}}>Por outro lado somos subjetivos e emocionais, reagindo a estímulos externos e internos, </span><span style={{color:'#db7f34'}}>que nos fazem sentir
+          <img src="home_brain_640x440.jpg" alt="Brain" className="brain-art-image" />
+          <p className='paragraph'><span style={{color:'green'}}>Por outro lado somos subjetivos e emocionais, reagindo a estímulos externos e internos, </span><span style={{color:'#db7f34'}}>que nos fazem sentir
           de uma determinada forma, que nos fazem agir de uma determinada forma.</span><span style={{color:'blue'}}>A composição dessas partes nos fazem ser
-          quem somos. Para nos conhecermos melhor,</span><span style={{color:'purple'}}> precisamos nos permitir sentir e pensar sobre nós mesmos.</span></div>
+          quem somos. Para nos conhecermos melhor,</span><span style={{color:'purple'}}> precisamos nos permitir sentir e pensar sobre nós mesmos.</span></p>
           
         </section>
        </section> 
