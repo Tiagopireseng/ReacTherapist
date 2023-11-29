@@ -37,7 +37,6 @@ const Schedule: React.FC = observer(() => {
 
   // Memoize the computation of the schedule grid
   const scheduleGrid = useMemo(() => {
-    console.log('Schedule rendered', appointmentStore.appointments);
     const days = getCurrentWeekDays();
     const hours = Array.from({ length: 15 }, (_, i) => 7 + i); // 7:00 to 21:00
 
