@@ -117,7 +117,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding-left: 0;
     margin: 2px;
