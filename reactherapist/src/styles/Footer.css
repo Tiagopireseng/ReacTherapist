@@ -1,15 +1,9 @@
 .footer {
     background: linear-gradient(to right, #518fd6, #0b1258);
     color: white;
-    padding: 20px;
     text-align: center;
-    bottom: 0;
-    border-radius: 50% 50% 0px 0px;
+    border-radius: 50% 50% 0 0;
     width: 100%;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 1000
   }
   
   .footer-content {
@@ -19,6 +13,9 @@
     justify-content: center;
   }
   
-  .footer-content p {
-    margin: 5px 0;
+  @media screen and (max-width: 650px) {
+    .footer{
+        font-size: 10px;
+    }
+    
   }

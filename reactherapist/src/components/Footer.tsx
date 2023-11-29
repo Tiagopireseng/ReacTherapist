@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>CRP: 00881 11a Região - Nome: Louisianne Barros de Siqueira</p>
+        <p>CRP: 00881 11a Região - Nome: Luisianna Silva</p>
         <p>Endereço: Avenida Dom Luiz 714, Apto 407 - Celular: 085 98814 8330</p>
       </div>
     </footer>
