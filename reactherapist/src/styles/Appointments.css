@@ -1,6 +1,6 @@
 
 .section {
-    max-width: 1200px; /* Set a maximum width for the content */
+    max-width: 800px; /* Set a maximum width for the content */
     margin: 0 auto; /* Center the content horizontally */
     text-align: center; /* Center the text within the section */
     padding: 20px; /* Add some padding for spacing */
@@ -8,6 +8,10 @@
     box-shadow: 0 0 10px rgba(59, 56, 56, 0.1); /* Add a subtle box shadow for depth */
     margin-bottom: 20px; /* Add margin at the bottom for spacing between sections */
     border-radius: 15px;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
 
 /* Additional styling for specific elements within a section if needed */
