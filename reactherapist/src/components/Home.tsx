@@ -1,6 +1,8 @@
 // src/components/Home.tsx
 import React from 'react';
 import '../styles/Home.css';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -23,42 +25,21 @@ const Home: React.FC = () => {
           quem somos. Para nos conhecermos melhor,</span><span style={{color:'purple'}}> precisamos nos permitir sentir e pensar sobre nós mesmos.</span></p>
           
         </section>
-       </section> 
+      </section> 
       <section className="section">
-        <h2>Welcome to Our Therapist Landing Page</h2>
-        <p>Professional support for your mental well-being.</p>
-        {/* Add hero section content as needed */}
-      </section>
-
-      <section className="section">
-        <h2>About the Therapist</h2>
-        <p>Brief description of the therapist and their approach.</p>
-        {/* Add about section content as needed */}
-      </section>
-
-      <section className="section">
-        <h2>Services Offered</h2>
-        <ul>
-          <li>Individual Counseling</li>
-          <li>Couples Therapy</li>
-          <li>Group Workshops</li>
-          {/* Add more services as needed */}
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>Client Testimonials</h2>
-        <div className="testimonial">
-          <p>"I found the support I needed. Highly recommended!"</p>
-          <p>- Client Name</p>
-        </div>
-        {/* Add more testimonials as needed */}
-      </section>
-
-      <section className="section">
-        <h2>Contact</h2>
-        <p>Get in touch to schedule an appointment or ask questions.</p>
-        {/* Add contact form or contact information */}
+        <h2>Bem-vindo à Clínica Lousir Psi</h2>
+        <section className="sub-section">
+            <img src="hero.png" className="hero-image" alt="Caricatura da Psicóloga"/>
+          <div className="hero-text">
+            <p>A Clínica Lousir Psi, liderada pela renomada psicóloga Luisianna Silva, oferece um ambiente acolhedor e profissional para seu desenvolvimento e bem-estar emocional.</p>
+            <p>Com uma abordagem personalizada, a clínica se dedica a entender e atender às suas necessidades únicas, ajudando você a alcançar equilíbrio e satisfação pessoal. Aqui, cada jornada é valorizada e cada passo é importante.</p>
+          </div>
+        </section>
+        <Link to="/appointments">
+          <button className="hero-btn">
+            Agende uma consulta
+          </button>     
+        </Link>   
       </section>
     </div>
   );
