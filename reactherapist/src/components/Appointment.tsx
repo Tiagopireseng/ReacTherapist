@@ -26,7 +26,6 @@ const Appointment: React.FC<{ appointment: AppointmentType; id: string }> = obse
   
 
   const handleSelect = () => {
-    console.log('Appointment selected');
     setIsSelected(!isSelected);
   };
 
@@ -44,7 +43,7 @@ const Appointment: React.FC<{ appointment: AppointmentType; id: string }> = obse
       {isSelected && (
         <>
           <button className="btn-appointment" onClick={handleSchedule}>
-            {isScheduled ? 'Cancel' : 'Schedule'}
+            {isScheduled ? 'Cancelar' : 'Agendar'}
           </button>
         </>
       )}

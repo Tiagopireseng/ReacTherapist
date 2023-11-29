@@ -11,7 +11,6 @@ import Schedule from './Schedule';
 const Appointments: React.FC = observer(() => {
   useEffect(() => {
     appointmentStore.fetchAppointments();
-    console.log('Appointments rendered'); 
   }, []);
   return (
     <div className="appointment-feed">
