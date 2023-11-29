@@ -11,9 +11,6 @@ class AppointmentStore {
   getCurrentWeek() {
     const now = new Date();
     const weekDay = now.getDay();
-    console.log(now);
-    // Adjust so that week starts on Monday
-    // If today is Sunday (0), set to -6; otherwise, subtract the weekday number
     const firstDayOfWeek = now.getDate() - weekDay;
     const lastDayOfWeek = firstDayOfWeek + 5;
 
